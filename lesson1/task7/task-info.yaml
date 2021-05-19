@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 272
+  - offset: 226
     length: 20
     placeholder_text: '# TODO'
 - name: __init__.py

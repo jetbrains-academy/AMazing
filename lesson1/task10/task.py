@@ -9,9 +9,8 @@ class Maze:
              'W': (-1, 0),
              'E': (1, 0)}
 
-    def __init__(self, nx, ny, ix=0, iy=0):
+    def __init__(self, nx, ny):
         self.nx, self.ny = nx, ny
-        self.ix, self.iy = ix, iy
         self.maze_grid = [[Cell(x, y) for y in range(ny)] for x in range(nx)]
 
     def cell_at(self, x, y):
@@ -61,7 +60,7 @@ class Maze:
     def make_maze(self):
         n = self.nx * self.ny
         cell_stack = []
-        current_cell = self.cell_at(self.ix, self.iy)
+        current_cell = self.cell_at(0, 0)
         n_visited = 1
 
         while n_visited < n:

@@ -1,6 +1,6 @@
 It's now time to create a maze!
-A Maze, represented as a grid of cells.
+As it was mentioned before, maze can be represented as a grid of cells.
 
-Initialize the maze grid.
+Initialize the `maze_grid`.
 The maze consists of `nx` x `ny` cells and will be constructed starting
 at the cell indexed at (ix, iy).
