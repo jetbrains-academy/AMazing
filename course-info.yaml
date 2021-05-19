@@ -1,0 +1,7 @@
+title: AMazing
+language: English
+summary: Learn to create a perfect maze using Python.
+programming_language: Python
+environment: unittest
+content:
+- lesson1

@@ -1,0 +1,1 @@
+Add method to check Does this cell still have all its walls?

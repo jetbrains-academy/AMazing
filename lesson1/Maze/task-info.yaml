@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 175
+    length: 50
+    placeholder_text: create ny by nx Cells
+- name: __init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: cell.py
+  visible: true

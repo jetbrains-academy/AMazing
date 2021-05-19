@@ -1,0 +1,19 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 561
+    length: 24
+    placeholder_text: '# TODO'
+  - offset: 680
+    length: 158
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: false
+- name: cell.py
+  visible: true
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

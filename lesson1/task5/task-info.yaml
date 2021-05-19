@@ -1,0 +1,14 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 365
+    length: 21
+    placeholder_text: get a proper value from the wall_pairs field
+- name: __init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
