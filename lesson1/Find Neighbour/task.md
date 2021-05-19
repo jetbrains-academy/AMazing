@@ -1,3 +1,6 @@
-Return a list of unvisited neighbours to cell.
+Find all neighbour cells with no knocked down walls.
 
-Нужно найти все ячейки, соседние с данной, у которых при этом все стены присутствуют.
+### Task
+
+Check all directions from the current cell, get the cell at the chosen point, and check whether this cell still has all the walls present.
+Put such a cell to the list of neighbours.

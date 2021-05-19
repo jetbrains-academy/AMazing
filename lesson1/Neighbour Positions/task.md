@@ -1,3 +1,6 @@
-Ячейка к северу смещена относительно текущей на -1 по оси y и на 0 по оси x.
-Для того, чтобы легко находить все соседние ячейки нам понадобится переменная `delta`, 
-в которой мы будем хранить это соответствие для всех возможных направлений.
+One more important task is to find all adjacent cells. We know that cell to the
+The cell to the north of the current has an offset of `-1` on the y-axis and `0` on the x-axis.
+
+### Task
+
+Let's put all possible offsets to the `delta` variable.

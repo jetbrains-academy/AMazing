@@ -1,5 +1,7 @@
 A wall separates a pair of cells in the N-S or W-E directions.
 
-Если у ячейки есть стена W, значит у соседней с ней ячейки должна быть стена E.
+When a cell has a wall "W", then the adjacent cell must have a wall "E".
 
-Сделайте dict, для того, чтобы легко определять парную стену для текущей.
+### Task
+
+Add missing wall pairs to the `wall_pairs` field.
