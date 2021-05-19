@@ -1,12 +1,13 @@
 type: framework
 content:
-- task1
-- task2
-- task3
-- task4
-- task5
+- Introduction
+- Create a Cell
+- Add Walls to the Cell
+- Has All Walls
+- Wall Pairs
+- Knock Down Wall
 - Maze
-- task7
-- task8
-- task9
-- task10
+- Get Cell at Position
+- Neighbour Positions
+- Find Neighbour
+- Make the Maze
