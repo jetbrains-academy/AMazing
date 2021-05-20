@@ -19,3 +19,5 @@ files:
   visible: false
 - name: maze.svg
   visible: true
+- name: execute.svg
+  visible: false
