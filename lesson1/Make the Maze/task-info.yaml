@@ -17,7 +17,5 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: maze.svg
-  visible: true
 - name: execute.svg
   visible: false
