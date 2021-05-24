@@ -37,7 +37,7 @@ class Maze:
             f.write('<?xml version="1.0" encoding="utf-8"?>')
             f.write('<svg xmlns="http://www.w3.org/2000/svg"')
             f.write('    xmlns:xlink="http://www.w3.org/1999/xlink"')
-            f.write(f'    width="{520:d}" height="{520:d}" viewBox="{-10} {-10} {520} {520}">')
+            f.write('    width="520" height="520" viewBox="-10 -10 520 520">')
             f.write('<defs>\n<style type="text/css"><![CDATA[')
             f.write('line {')
             f.write('    stroke: #000000;\n    stroke-linecap: square;')
@@ -53,8 +53,8 @@ class Maze:
                         x1, y1, x2, y2 = (x + 1) * scx, y * scy, (x + 1) * scx, (y + 1) * scy
                         write_wall(f, x1, y1, x2, y2)
 
-            f.write(f'<line x1="0" y1="0" x2="{500}" y2="0"/>')
-            f.write(f'<line x1="0" y1="0" x2="0" y2="{500}"/>')
+            f.write('<line x1="0" y1="0" x2="500" y2="0"/>')
+            f.write('<line x1="0" y1="0" x2="0" y2="500"/>')
             f.write('</svg>')
 
     def make_maze(self):
