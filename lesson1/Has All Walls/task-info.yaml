@@ -12,3 +12,7 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: cell_walls.png
+  visible: true
+- name: output.py
+  visible: true
