@@ -3,11 +3,11 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 515
+  - offset: 540
     length: 24
     placeholder_text: '# TODO'
-  - offset: 634
-    length: 158
+  - offset: 657
+    length: 152
     placeholder_text: '# TODO'
 - name: __init__.py
   visible: false
