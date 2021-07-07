@@ -11,6 +11,6 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 102
+  - offset: 121
     length: 38
     placeholder_text: add deltas for the W and E directions
