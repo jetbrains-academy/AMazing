@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 129
+  - offset: 157
     length: 50
     placeholder_text: create ny by nx Cells
 - name: __init__.py
@@ -13,4 +13,6 @@ files:
 - name: tests/__init__.py
   visible: false
 - name: cell.py
+  visible: true
+- name: output.py
   visible: true
