@@ -12,3 +12,5 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: output.py
+  visible: true
