@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 117
+  - offset: 152
     length: 20
     placeholder_text: add 2 more walls
 - name: __init__.py
