@@ -3,7 +3,7 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 226
+  - offset: 254
     length: 20
     placeholder_text: '# TODO'
 - name: __init__.py
@@ -14,3 +14,5 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: output.py
+  visible: true

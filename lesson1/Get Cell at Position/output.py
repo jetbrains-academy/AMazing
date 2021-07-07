@@ -64,10 +64,17 @@ if __name__ == '__main__':
     dim1 = int(input('Enter x dimension: '))
     dim2 = int(input('Enter y dimension: '))
     maze = Maze(dim1, dim2)
-    # cells = generate_cells(dim1, dim2)
+
+    print(maze.cell_at(dim1 - 1, dim2 - 1))
 
     w, h = (80 + 100 * dim for dim in maze.maze_grid.shape)
 
-    # Draw an image of two adjacent cells before knocking down the wall
     img = Image.new("RGB", (w, h), (255, 255, 255))
-    draw_image(img, "adjacent_cells.png", maze.maze_grid)
+    img1 = ImageDraw.Draw(img)
+    draw_grid(img1, maze.maze_grid.shape[0], maze.maze_grid.shape[1])
+    highlighted_cell = maze.cell_at(int(input('Enter x coordinate of cell to highlight: ')),
+                                    int(input('Enter y coordinate of cell to highlight: ')))
+    draw_cell(highlighted_cell, img1)
+
+    img.show()
+    img.save('highlighted_cell.png')
