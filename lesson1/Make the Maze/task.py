@@ -1,5 +1,5 @@
 import random
-
+import numpy as np
 from cell import Cell
 
 
@@ -11,7 +11,7 @@ class Maze:
 
     def __init__(self, nx, ny):
         self.nx, self.ny = nx, ny
-        self.maze_grid = [[Cell(x, y) for y in range(ny)] for x in range(nx)]
+        self.maze_grid = np.array([[Cell(x, y) for y in range(ny)] for x in range(nx)])
 
     def cell_at(self, x, y):
         return self.maze_grid[x][y]
@@ -78,6 +78,9 @@ class Maze:
 
 
 if __name__ == '__main__':
-    maze = Maze(5, 5)
+    dim1 = int(input('Enter x dimension: '))
+    dim2 = int(input('Enter y dimension: '))
+    maze = Maze(dim1, dim2)
+    # maze = Maze(5, 5)
     maze.make_maze()
     maze.write_svg("maze.svg")

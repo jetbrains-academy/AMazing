@@ -3,10 +3,10 @@ files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 2618
+  - offset: 2646
     length: 56
     placeholder_text: '# we''ve reached dead end => get next cell from the cell stack'
-  - offset: 2688
+  - offset: 2716
     length: 192
     placeholder_text: '# choose a random neighbouring cell and move to it'
 - name: __init__.py
@@ -19,3 +19,7 @@ files:
   visible: false
 - name: execute.svg
   visible: false
+- name: output.py
+  visible: true
+- name: maze.png
+  visible: true
