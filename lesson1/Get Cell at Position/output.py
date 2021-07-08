@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw
 import numpy as np
 
 
-def draw_cell(cell, image, color="black"):
+def draw_cell(cell, image, color="black", wide=5):
     filt = [x for x in cell.walls.values()]
     x = 90 + cell.x * 100
     y = 90 + cell.y * 100
@@ -16,7 +16,7 @@ def draw_cell(cell, image, color="black"):
     lines = north, south, east, west
     filtered_lines = [i for (i, v) in zip(lines, filt) if v]
     for line in filtered_lines:
-        image.line(line, fill=color, width=5)
+        image.line(line, fill=color, width=wide)
 
 
 def draw_grid(image, x_cells, y_cells):
@@ -32,21 +32,7 @@ def draw_grid(image, x_cells, y_cells):
 
 
 def get_dimensions(*cells):
-    xs = [cell.x for cell in cells]
-    ys = [cell.y for cell in cells]
-    return max(xs) + 1, max(ys) + 1
-
-
-def draw_image(image, filename, cells):
-    img1 = ImageDraw.Draw(image)
-    xc = cells.shape[0]
-    yc = cells.shape[1]
-    draw_grid(img1, xc, yc)
-    for cell in cells.flatten():
-        draw_cell(cell, img1)
-
-    image.show()
-    image.save(filename)
+    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
 
 
 def generate_cells(x, y):

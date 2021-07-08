@@ -24,16 +24,12 @@ def draw_grid(image, x_cells, y_cells):
 
 
 def get_dimensions(*cells):
-    xs = [cell.x for cell in cells]
-    ys = [cell.y for cell in cells]
-    return max(xs) + 1, max(ys) + 1
+    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
 
 
 def draw_image(image, filename, *cells):
     img1 = ImageDraw.Draw(image)
-    xc = get_dimensions(*cells)[0]
-    yc = get_dimensions(*cells)[1]
-    draw_grid(img1, xc, yc)
+    draw_grid(img1, get_dimensions(*cells)[0], get_dimensions(*cells)[1])
     for cell in cells:
         draw_cell(cell, img1)
 
