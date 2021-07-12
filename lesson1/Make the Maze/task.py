@@ -61,6 +61,7 @@ class Maze:
         n = self.nx * self.ny
         cell_stack = []
         current_cell = self.cell_at(0, 0)
+        current_cell.status = 'Start'
         n_visited = 1
 
         while n_visited < n:
@@ -75,6 +76,8 @@ class Maze:
             cell_stack.append(current_cell)
             current_cell = next_cell
             n_visited += 1
+            if n_visited == n:
+                current_cell.status = 'End'
 
 
 if __name__ == '__main__':
