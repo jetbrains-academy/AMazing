@@ -71,4 +71,4 @@ if __name__ == '__main__':
         draw_cell(neighbor[1], img1, color="red", wide=2)
 
     img.show()
-    img.save('highlighted_cell.png')
+    img.save('neighbors.png')

@@ -65,4 +65,4 @@ if __name__ == '__main__':
 
     # Draw an image of two adjacent cells before knocking down the wall
     img = Image.new("RGB", (w, h), (255, 255, 255))
-    draw_image(img, "adjacent_cells.png", maze.maze_grid)
+    draw_image(img, "maze_grid.png", maze.maze_grid)
