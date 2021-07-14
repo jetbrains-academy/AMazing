@@ -1,5 +1,11 @@
 type: edu
 files:
+- name: task.py
+  visible: true
+  placeholders:
+    - offset: 121
+      length: 38
+      placeholder_text: add deltas for the W and E directions
 - name: __init__.py
   visible: false
 - name: cell.py
@@ -8,9 +14,4 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: task.py
-  visible: true
-  placeholders:
-  - offset: 121
-    length: 38
-    placeholder_text: add deltas for the W and E directions
+

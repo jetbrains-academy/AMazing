@@ -13,13 +13,11 @@ files:
   visible: false
 - name: cell.py
   visible: true
-- name: tests/test_task.py
+- name: execute.svg
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: execute.svg
+- name: tests/test_task.py
   visible: false
 - name: output.py
-  visible: true
-- name: maze.png
   visible: true
