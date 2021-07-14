@@ -30,17 +30,6 @@ def draw_grid(image, x_cells, y_cells):
         draw_cell(cel, image, color="lightgray")
 
 
-def generate_cells(x, y):
-    cells_ = {}
-    count = 0
-    for i in range(x):
-        for j in range(y):
-            cell_name = "Cell%d" % count
-            count += 1
-            cells_[cell_name] = Cell(i, j)
-    return cells_
-
-
 if __name__ == '__main__':
     dim1 = int(input('Enter x dimension: '))
     dim2 = int(input('Enter y dimension: '))
