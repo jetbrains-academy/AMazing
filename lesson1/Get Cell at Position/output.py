@@ -1,7 +1,6 @@
 from cell import Cell
 from task import Maze
 from PIL import Image, ImageDraw
-import numpy as np
 
 
 def draw_cell(cell, image, color="black", wide=5):
@@ -64,5 +63,4 @@ if __name__ == '__main__':
                                     int(input('Enter y coordinate of cell to highlight: ')))
     draw_cell(highlighted_cell, img1)
 
-    img.show()
     img.save('highlighted_cell.png')

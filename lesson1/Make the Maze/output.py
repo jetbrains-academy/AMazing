@@ -67,4 +67,3 @@ if __name__ == '__main__':
     img = Image.new("RGB", (w, h), (255, 255, 255))
 
     draw_image(img, "maze.png", maze.maze_grid)
-

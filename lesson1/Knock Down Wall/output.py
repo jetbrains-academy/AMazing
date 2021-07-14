@@ -33,7 +33,6 @@ def draw_image(image, filename, *cells):
     for cell in cells:
         draw_cell(cell, img1)
 
-    image.show()
     image.save(filename)
 
 

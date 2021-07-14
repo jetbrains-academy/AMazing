@@ -1,7 +1,6 @@
 from cell import Cell
 from task import Maze
 from PIL import Image, ImageDraw
-import numpy as np
 
 
 def draw_cell(cell, image, color="black", wide=5):
@@ -38,9 +37,8 @@ def get_dimensions(*cells):
 def draw_image(image, filename, cells):
     img1 = ImageDraw.Draw(image)
     draw_grid(img1, cells.shape[0], cells.shape[1])
-    for cell in cells.flatten():
-        draw_cell(cell, img1)
-    image.show()
+    # for cell in cells.flatten():
+    #     draw_cell(cell, img1)
     image.save(filename)
 
 

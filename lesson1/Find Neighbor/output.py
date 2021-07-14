@@ -1,7 +1,6 @@
 from cell import Cell
 from task import Maze
 from PIL import Image, ImageDraw
-import numpy as np
 
 
 def draw_cell(cell, image, color="black", wide=5):
@@ -70,5 +69,4 @@ if __name__ == '__main__':
     for neighbor in neighbors:
         draw_cell(neighbor[1], img1, color="red", wide=2)
 
-    img.show()
     img.save('neighbors.png')
