@@ -34,28 +34,12 @@ def draw_grid(image, x_cells, y_cells):
         draw_cell(cel, image, "lightgray")
 
 
-def get_dimensions(*cells):
-    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
-
-
 def draw_image(image, filename, cells):
     img1 = ImageDraw.Draw(image)
     draw_grid(img1, cells.shape[0], cells.shape[1])
     for cell in cells.flatten():
         draw_cell(cell, img1)
-    image.show()
     image.save(filename)
-
-
-def generate_cells(x, y):
-    cells_ = {}
-    count = 0
-    for i in range(x):
-        for j in range(y):
-            cell_name = "Cell%d" % count
-            count += 1
-            cells_[cell_name] = Cell(i, j)
-    return cells_
 
 
 if __name__ == '__main__':
