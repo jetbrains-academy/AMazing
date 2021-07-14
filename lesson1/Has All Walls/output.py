@@ -4,7 +4,6 @@ from PIL import Image, ImageDraw
 if __name__ == '__main__':
     cell = Cell(0, 0)
     print(f'The cell at {cell.x, cell.y} has all walls: {cell.has_all_walls()}')
-    filter_ = [x for x in cell.walls.values()]
 
     # Setting up dimensions and line coordinates:
     w, h = 200, 200
@@ -14,6 +13,8 @@ if __name__ == '__main__':
                                  [(w - 40, 40), (w - 40, h - 40)]
 
     lines = line1, line2, line3, line4
+    filter_ = [x for x in cell.walls.values()]
+    # Remove absent walls from `lines`:
     filtered_lines = [i for (i, v) in zip(lines, filter_) if v]
 
     # Creating new Image object:
