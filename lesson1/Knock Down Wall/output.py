@@ -3,7 +3,6 @@ from PIL import Image, ImageDraw
 
 
 def draw_cell(cell, image, color="black"):
-    filt = [x for x in cell.walls.values()]
     x = 90 + cell.x * 100
     y = 90 + cell.y * 100
 
@@ -12,6 +11,7 @@ def draw_cell(cell, image, color="black"):
                                [(x + 50, y - 50), (x + 50, y + 50)], \
                                [(x - 50, y - 50), (x - 50, y + 50)]
     lines = north, south, east, west
+    filt = [x for x in cell.walls.values()]
     filtered_lines = [i for (i, v) in zip(lines, filt) if v]
     for line in filtered_lines:
         image.line(line, fill=color, width=5)
