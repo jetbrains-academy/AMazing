@@ -27,19 +27,7 @@ def draw_grid(image, x_cells, y_cells):
             count += 1
             cells_[cell_name] = Cell(i, j)
     for cel in cells_.values():
-        draw_cell(cel, image, "lightgray")
-
-
-def get_dimensions(*cells):
-    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
-
-
-def draw_image(image, filename, cells):
-    img1 = ImageDraw.Draw(image)
-    draw_grid(img1, cells.shape[0], cells.shape[1])
-    # for cell in cells.flatten():
-    #     draw_cell(cell, img1)
-    image.save(filename)
+        draw_cell(cel, image, color="lightgray")
 
 
 def generate_cells(x, y):
@@ -57,10 +45,11 @@ if __name__ == '__main__':
     dim1 = int(input('Enter x dimension: '))
     dim2 = int(input('Enter y dimension: '))
     maze = Maze(dim1, dim2)
-    # cells = generate_cells(dim1, dim2)
-
     w, h = (80 + 100 * dim for dim in maze.maze_grid.shape)
-
-    # Draw an image of two adjacent cells before knocking down the wall
     img = Image.new("RGB", (w, h), (255, 255, 255))
-    draw_image(img, "maze_grid.png", maze.maze_grid)
+    img1 = ImageDraw.Draw(img)
+
+    # Draw an image of the maze grid:
+    draw_grid(img1, maze.maze_grid.shape[0], maze.maze_grid.shape[1])
+    img.save("maze_grid.png")
+
