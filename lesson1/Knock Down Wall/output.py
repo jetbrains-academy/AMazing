@@ -23,10 +23,6 @@ def draw_grid(image, x_cells, y_cells):
         draw_cell(cel, image, "lightgray")
 
 
-def get_dimensions(*cells):
-    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
-
-
 def draw_image(image, filename, *cells):
     img1 = ImageDraw.Draw(image)
     draw_grid(img1, get_dimensions(*cells)[0], get_dimensions(*cells)[1])
@@ -34,6 +30,12 @@ def draw_image(image, filename, *cells):
         draw_cell(cell, img1)
 
     image.save(filename)
+
+
+# The following two functions are needed for visualization here
+# because we still don't have a Maze object, only the Cells.
+def get_dimensions(*cells):
+    return max([cell.x for cell in cells]) + 1, max([cell.y for cell in cells]) + 1
 
 
 def generate_cells(x, y):
