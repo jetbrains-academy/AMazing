@@ -17,9 +17,12 @@ def draw_cell(cell, image, color="black", wide=5):
     for line in filtered_lines:
         image.line(line, fill=color, width=wide)
     if cell.status == 'Start' or cell.status == 'End':
-        # font = ImageFont.load_default()  # Uncomment this if font loading fails
-        font = ImageFont.truetype("Arial Unicode.ttf", 18)  # Comment this if font loading fails
-        image.text((x - 25, y - 10), cell.status.upper(), (255, 0, 0), font=font)
+        try:
+            font = ImageFont.truetype("Arial Unicode.ttf", 18)
+            image.text((x - 25, y - 10), cell.status.upper(), (255, 0, 0), font=font)
+        except OSError:
+            font = ImageFont.load_default()
+            image.text((x - 25, y - 10), cell.status.upper(), (255, 0, 0), font=font)
 
 
 def draw_grid(image, x_cells, y_cells):
