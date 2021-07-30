@@ -4,18 +4,19 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def draw_cell(cell, image, color="black", wide=5):
-    filt = [x for x in cell.walls.values()]
-    x = 90 + cell.x * 100
-    y = 90 + cell.y * 100
+    # Cell coordinates on the image calculated from its (x, y) coordinates,
+    # cell side length (100 pt), image margin (90 pt) and line thickness (10 pt).
+    x = margin + line_thickness + cell.x * cell_side
+    y = margin + line_thickness + cell.y * cell_side
 
-    north, south, east, west = [(x - 50, y - 50), (x + 50, y - 50)], \
-                               [(x - 50, y + 50), (x + 50, y + 50)], \
-                               [(x + 50, y - 50), (x + 50, y + 50)], \
-                               [(x - 50, y - 50), (x - 50, y + 50)]
+    north, south, east, west = [(x - cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y - cell_side / 2)], \
+                               [(x - cell_side / 2, y + cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+                               [(x + cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+                               [(x - cell_side / 2, y - cell_side / 2), (x - cell_side / 2, y + cell_side / 2)]
     lines = north, south, east, west
-    filtered_lines = [i for (i, v) in zip(lines, filt) if v]
-    for line in filtered_lines:
-        image.line(line, fill=color, width=wide)
+    shown_walls = [i for (i, v) in zip(lines, cell.walls.values()) if v]
+    for wall in shown_walls:
+        image.line(wall, fill=color, width=wide)
     if cell.status == 'Start' or cell.status == 'End':
         try:
             font = ImageFont.truetype("Arial Unicode.ttf", 18)
@@ -38,19 +39,22 @@ def draw_grid(image, x_cells, y_cells):
 
 
 def draw_image(image, filename, cells):
-    img1 = ImageDraw.Draw(image)
-    draw_grid(img1, cells.shape[0], cells.shape[1])
+    maze_img = ImageDraw.Draw(image)
+    draw_grid(maze_img, cells.shape[0], cells.shape[1])
     for cell in cells.flatten():
-        draw_cell(cell, img1)
+        draw_cell(cell, maze_img)
     image.save(filename)
 
 
 if __name__ == '__main__':
     dim1 = int(input('Enter x dimension: '))
     dim2 = int(input('Enter y dimension: '))
+    margin = 80
+    cell_side = 100
+    line_thickness = 10
     maze = Maze(dim1, dim2)
     maze.make_maze()
-    w, h = (80 + 100 * dim for dim in maze.maze_grid.shape)
-    img = Image.new("RGB", (w, h), (255, 255, 255))
+    width, height = (margin + cell_side * dim for dim in maze.maze_grid.shape)
+    img = Image.new("RGB", (width, height), (255, 255, 255))
 
     draw_image(img, "maze.png", maze.maze_grid)

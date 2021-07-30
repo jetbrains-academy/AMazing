@@ -3,24 +3,25 @@ from PIL import Image, ImageDraw
 
 
 def draw_cell(cell, image, color="black"):
-    x = 90 + cell.x * 100
-    y = 90 + cell.y * 100
+    # Cell coordinates on the image calculated from its (x, y) coordinates,
+    # cell side length (100 pt), image margin (90 pt) and line thickness (10 pt).
+    x = margin + line_thickness + cell.x * cell_side
+    y = margin + line_thickness + cell.y * cell_side
 
-    north, south, east, west = [(x - 50, y - 50), (x + 50, y - 50)], \
-                               [(x - 50, y + 50), (x + 50, y + 50)], \
-                               [(x + 50, y - 50), (x + 50, y + 50)], \
-                               [(x - 50, y - 50), (x - 50, y + 50)]
+    north, south, east, west = [(x - cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y - cell_side / 2)], \
+                               [(x - cell_side / 2, y + cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+                               [(x + cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+                               [(x - cell_side / 2, y - cell_side / 2), (x - cell_side / 2, y + cell_side / 2)]
     lines = north, south, east, west
-    filt = [x for x in cell.walls.values()]
-    filtered_lines = [i for (i, v) in zip(lines, filt) if v]
-    for line in filtered_lines:
-        image.line(line, fill=color, width=5)
+    shown_walls = [i for (i, v) in zip(lines, cell.walls.values()) if v]
+    for wall in shown_walls:
+        image.line(wall, fill=color, width=5)
 
 
 def draw_grid(image, x_cells, y_cells):
-    cels = generate_cells(x_cells, y_cells)
-    for cel in cels.values():
-        draw_cell(cel, image, "lightgray")
+    cells_ = generate_cells(x_cells, y_cells)
+    for cell_ in cells_.values():
+        draw_cell(cell_, image, "lightgray")
 
 
 def draw_image(image, filename, *cells):
@@ -53,12 +54,14 @@ if __name__ == '__main__':
     # dim1 = int(input())
     # dim2 = int(input())
     dim1, dim2 = 1, 2
+    margin = 80
+    cell_side = 100
+    line_thickness = 10
     cells = generate_cells(dim1, dim2)
-
-    w, h = (80 + 100 * dim for dim in get_dimensions(*cells.values()))
+    width, height = (margin + cell_side * dim for dim in get_dimensions(*cells.values()))
 
     # Draw an image of two adjacent cells before knocking down the wall
-    img = Image.new("RGB", (w, h), (255, 255, 255))
+    img = Image.new("RGB", (width, height), (255, 255, 255))
     draw_image(img, "adjacent_cells.png", *cells.values())
 
     # Knock down an S wall of the (0,0) cell
@@ -67,5 +70,5 @@ if __name__ == '__main__':
     print(f'Cell 1 walls: {cells["Cell1"].walls}')
 
     # Draw an image of two adjacent cells after knocking down the wall
-    img2 = Image.new("RGB", (w, h), (255, 255, 255))
-    draw_image(img2, "removed_NS_wall.png", *cells.values())
+    wall_img = Image.new("RGB", (width, height), (255, 255, 255))
+    draw_image(wall_img, "removed_NS_wall.png", *cells.values())

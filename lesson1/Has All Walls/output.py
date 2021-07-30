@@ -6,18 +6,18 @@ if __name__ == '__main__':
     print(f'The cell at {cell.x, cell.y} has all walls: {cell.has_all_walls()}')
 
     # Setting up dimensions and line coordinates:
-    w, h = 200, 200
-    line1, line2, line3, line4 = [(40, 40), (w - 40, 40)], \
-                                 [(40, h - 40), (w - 40, h - 40)], \
-                                 [(40, 40), (40, h - 40)], \
-                                 [(w - 40, 40), (w - 40, h - 40)]
+    width, height = 200, 200
+    line1, line2, line3, line4 = [(40, 40), (width - 40, 40)], \
+                                 [(40, height - 40), (width - 40, height - 40)], \
+                                 [(40, 40), (40, height - 40)], \
+                                 [(width - 40, 40), (width - 40, height - 40)]
 
     lines = line1, line2, line3, line4
     # Remove absent walls from `lines`:
     shown_walls = [i for (i, v) in zip(lines, cell.walls.values()) if v]
 
-    # Creating new Image object:
-    img = Image.new("RGB", (w, h), (255, 255, 255))
+    # Create new Image object:
+    img = Image.new("RGB", (width, height), (255, 255, 255))
 
     # Create line image:
     walls_img = ImageDraw.Draw(img)
