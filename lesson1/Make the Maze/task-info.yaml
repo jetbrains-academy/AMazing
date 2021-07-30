@@ -3,11 +3,11 @@ files:
 - name: maze.py
   visible: true
   placeholders:
-  - offset: 2760
+  - offset: 2756
     length: 56
     placeholder_text: '# TODO: we reached a dead end => get next cell from the cell
       stack'
-  - offset: 2830
+  - offset: 2826
     length: 192
     placeholder_text: '# TODO: choose a random neighbouring cell and move to it'
 - name: __init__.py
