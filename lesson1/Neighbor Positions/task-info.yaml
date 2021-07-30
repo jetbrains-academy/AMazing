@@ -1,11 +1,11 @@
 type: edu
 files:
-- name: task.py
+- name: maze.py
   visible: true
   placeholders:
   - offset: 121
     length: 38
-    placeholder_text: add deltas for the W and E directions
+    placeholder_text: "'add deltas for': 'the W and E directions'"
 - name: __init__.py
   visible: false
 - name: cell.py

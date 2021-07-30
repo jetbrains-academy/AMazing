@@ -1,6 +1,6 @@
 type: edu
 files:
-- name: task.py
+- name: cell.py
   visible: true
   placeholders:
   - offset: 184
