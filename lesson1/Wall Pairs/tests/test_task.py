@@ -1,5 +1,5 @@
 import unittest
-from task import Cell
+from cell import Cell
 
 
 class TestCase(unittest.TestCase):

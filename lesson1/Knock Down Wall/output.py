@@ -1,4 +1,4 @@
-from task import Cell
+from cell import Cell
 from PIL import Image, ImageDraw
 
 

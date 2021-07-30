@@ -1,5 +1,5 @@
 import unittest
-from task import Maze
+from maze import Maze
 from cell import Cell
 
 

@@ -1,5 +1,5 @@
 from cell import Cell
-from task import Maze
+from maze import Maze
 from PIL import Image, ImageDraw, ImageFont
 
 

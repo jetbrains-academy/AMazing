@@ -1,4 +1,4 @@
-from task import Cell
+from cell import Cell
 
 
 if __name__ == '__main__':
