@@ -1,14 +1,16 @@
 type: edu
 files:
-- name: task.py
+- name: cell.py
   visible: true
   placeholders:
   - offset: 68
     length: 4
-    placeholder_text: assign cell position
+    placeholder_text: "'Assign cell position'"
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: output.py
+  visible: true
