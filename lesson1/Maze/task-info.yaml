@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 157
     length: 50
-    placeholder_text: "'create ny by nx Cells'"
+    placeholder_text: '''create ny by nx Cells'''
 - name: __init__.py
   visible: false
 - name: tests/test_task.py

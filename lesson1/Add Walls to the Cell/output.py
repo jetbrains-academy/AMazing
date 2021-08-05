@@ -7,12 +7,11 @@ if __name__ == '__main__':
 
     # Setting up dimensions and line coordinates:
     width, height = 200, 200
-    line1, line2, line3, line4 = [(40, 40), (width - 40, 40)], \
-                                 [(40, height - 40), (width - 40, height - 40)], \
-                                 [(40, 40), (40, height - 40)], \
-                                 [(width - 40, 40), (width - 40, height - 40)]
+    lines = [(40, 40), (width - 40, 40)], \
+            [(40, height - 40), (width - 40, height - 40)], \
+            [(40, 40), (40, height - 40)], \
+            [(width - 40, 40), (width - 40, height - 40)]
 
-    lines = line1, line2, line3, line4
     shown_walls = [i for (i, v) in zip(lines, cell.walls.values()) if v]
 
     # Create new Image object:

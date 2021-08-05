@@ -9,11 +9,11 @@ def draw_cell(cell, image, color="black", wide=5):
     x = margin + line_thickness + cell.x * cell_side
     y = margin + line_thickness + cell.y * cell_side
 
-    north, south, east, west = [(x - cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y - cell_side / 2)], \
-                               [(x - cell_side / 2, y + cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
-                               [(x + cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
-                               [(x - cell_side / 2, y - cell_side / 2), (x - cell_side / 2, y + cell_side / 2)]
-    lines = north, south, east, west
+    lines = [(x - cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y - cell_side / 2)], \
+            [(x - cell_side / 2, y + cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+            [(x + cell_side / 2, y - cell_side / 2), (x + cell_side / 2, y + cell_side / 2)], \
+            [(x - cell_side / 2, y - cell_side / 2), (x - cell_side / 2, y + cell_side / 2)]
+
     shown_walls = [i for (i, v) in zip(lines, cell.walls.values()) if v]
     for wall in shown_walls:
         image.line(wall, fill=color, width=wide)
@@ -47,12 +47,12 @@ def draw_image(image, filename, cells):
 
 
 if __name__ == '__main__':
-    dim1 = int(input('Enter x dimension: '))
-    dim2 = int(input('Enter y dimension: '))
+    dimension1 = int(input('Enter x dimension: '))
+    dimension2 = int(input('Enter y dimension: '))
     margin = 80
     cell_side = 100
     line_thickness = 10
-    maze = Maze(dim1, dim2)
+    maze = Maze(dimension1, dimension2)
     maze.make_maze()
     width, height = (margin + cell_side * dim for dim in maze.maze_grid.shape)
     img = Image.new("RGB", (width, height), (255, 255, 255))

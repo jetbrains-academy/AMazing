@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 117
     length: 20
-    placeholder_text: "'add 2 more': 'walls'"
+    placeholder_text: '''add 2 more'': ''walls'''
 - name: __init__.py
   visible: false
 - name: tests/test_task.py
