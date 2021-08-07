@@ -40,7 +40,7 @@ according to the following rules:
 
 Once there are no more unvisited cells left – the maze is built, and the algorithm terminates.
 
-<i>This course was devised as part of the Museum of Future exhibit “Maze solver via Reinforcement 
+<sub><i>This course was devised as part of the Museum of Future exhibit “Maze solver via Reinforcement 
 Learning”. The exhibit demonstrates how Reinforcement Learning can be used to solve a maze, that 
 is, to reach the exit as quickly as possible. To be able to complete this course you don’t need 
-to visit the Museum, even though it would certainly be fun! </i>
+to visit the Museum, even though it would certainly be fun!</i></sub>
