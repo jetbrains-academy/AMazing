@@ -17,7 +17,7 @@ in the number of cells along the corresponding axis), and the maze grid in the f
 ### Task
 Complete the line of the `__init__()`  method to initialize the `maze_grid`.
 
-<div class='hint'>It would be convenient to use list comprehension.</div> 
+<div class='hint'>It would be convenient to use <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">list comprehension</a>.</div> 
 
 ### Run
 Run `output.py` to see if you have successfully implemented the method. It will 
