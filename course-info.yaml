@@ -4,4 +4,6 @@ summary: Learn to create a perfect maze using Python.
 programming_language: Python
 environment: unittest
 content:
+- Introduction
 - lesson1
+
