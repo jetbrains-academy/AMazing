@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 68
     length: 4
-    placeholder_text: "'Assign cell position'"
+    placeholder_text: '''Assign cell position'''
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
@@ -14,3 +14,5 @@ files:
   visible: false
 - name: output.py
   visible: true
+- name: maze_grid.png
+  visible: false
