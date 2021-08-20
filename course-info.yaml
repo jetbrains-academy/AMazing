@@ -8,5 +8,4 @@ programming_language: Python
 environment: unittest
 content:
 - Introduction
-- lesson1
-
+- Building the Maze
