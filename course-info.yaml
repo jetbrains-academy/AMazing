@@ -1,9 +1,11 @@
 title: AMazing
 language: English
-summary: Learn to create a perfect maze using Python.
+summary: |-
+  <p>This is a course by JetBrains Educational Products in which you will
+     learn to create a perfect maze using Python.</p>
+  <p>The target audience are the people with a bit of experience in Python programming.</p>
 programming_language: Python
 environment: unittest
 content:
 - Introduction
-- lesson1
-
+- Building the Maze
