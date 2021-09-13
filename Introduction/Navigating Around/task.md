@@ -6,7 +6,7 @@ With the EduTools plugin, you can learn programming languages and tools by compl
 
 Enough talking – let's get started!
 
-If you're already familiar with the interface, you can skip this lesson.
+If you're already familiar with the interface, you can [skip](course://Building the Maze) this lesson.
 
 ### Working with courses
 Every course available in EduTools is structured as a list of lessons. Lessons, in turn, can be grouped into sections. Each lesson contains several tasks.
