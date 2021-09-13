@@ -5,7 +5,7 @@ files:
   placeholders:
   - offset: 255
     length: 20
-    placeholder_text: '# TODO'
+    placeholder_text: ' # TODO'
 - name: __init__.py
   visible: false
 - name: cell.py
