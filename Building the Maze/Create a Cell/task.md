@@ -1,7 +1,7 @@
-The maze can be represented as a grid of cells. Each maze cell has unique 2D coordinates 
-(x, y), which define its position within the grid, and from two to four neighbors: two in 
-the case of the corner cells like (1, 1) or (1, 3) in the example below and four in the 
-case of the inner cells, e.g., (2, 2). A cell may have walls on the north, east, south, 
+The maze can be represented as a grid of cells. Each maze cell has unique 2D coordinates
+<span style="white-space: nowrap">(x, y)</span>, which define its position within the grid, and from two to four neighbors: two in 
+the case of the corner cells like <span style="white-space: nowrap">(1, 1)</span> or <span style="white-space: nowrap">(1, 3)</span> 
+in the example below and four in the case of the inner cells, e.g., <span style="white-space: nowrap">(2, 2)</span>. A cell may have walls on the north, east, south, 
 or west side.
 
 <style>
@@ -28,7 +28,7 @@ will all have unique coordinates. Therefore, it seems appropriate to store coord
 
 ### Task 
 
-Let's [initialize](https://docs.python.org/3/tutorial/classes.html#class-objects) a `Cell` at `(x,y)`.
+Let's [initialize](https://docs.python.org/3/tutorial/classes.html#class-objects) a `Cell` at `(x, y)`.
 
 ### Run 
 
