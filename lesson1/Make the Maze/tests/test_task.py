@@ -75,4 +75,8 @@ class TestCase(unittest.TestCase):
         maze_ = Maze(5, 5)
         maze_.make_maze()
         test_ = [True if test_reachable(maze_) else False for i in range(100)]
-        self.assertTrue(all(test_), msg='Some cells appear unreachable in your maze :(')
+        self.assertTrue(all(test_), msg='Some cells appear unreachable in your maze :('
+                                        'This could happen if not all of the grid cells were visited '
+                                        'by your algorithm, or if walls were not knocked down.'
+                                        'Make sure both of these things happen. Visualization could'
+                                        'also be helpful.')
