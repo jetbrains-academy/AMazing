@@ -10,7 +10,8 @@ in place. Later on, we will be removing some of these walls.
 ### Task
 
 Let's create a dictionary `walls` where keys are directions (`"N"`, `"S"`, `"E"`, and `"W"`) and the values are 
-boolean, with the `True` value when the wall exists and `False` otherwise.
+boolean, with the `True` value when the wall exists and `False` otherwise. Initially, all cells have all
+four walls.
 
 ### Run
 Run `output.py` to see if you have successfully added walls to the cell. If so, it will generate a PNG 

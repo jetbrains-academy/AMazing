@@ -1,7 +1,7 @@
 Now let’s finally put it all together and build the maze!
 
 The algorithm should produce a path visiting each cell according to the following procedure:
-1) The algorithm starts at a given cell (0, 0) and marks it as visited. To keep track of the 
+1) The algorithm starts at a given cell <code><span style="white-space: nowrap">(0, 0)</span></code> and marks it as visited. To keep track of the 
   visited cells, we will use a list `cell_stack`.
 2) The algorithm inspects the neighboring cells and checks if any of them are yet to be visited 
   (if they have all their walls).

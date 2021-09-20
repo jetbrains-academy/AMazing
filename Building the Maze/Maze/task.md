@@ -1,6 +1,6 @@
 It's now time to start creating our maze! As it was mentioned before, we can represent 
-a maze as a grid of `nx` x `ny` interconnected cells and it will be constructed starting 
-at the cell indexed at `(0, 0)`. First, we will create the grid itself and visualize it.
+a maze as a grid of `nx` * `ny` interconnected cells, and it will be constructed starting 
+at the cell indexed at <code><span style="white-space: nowrap">(0, 0)</span></code>. First, we will create the grid itself and visualize it.
 
 
 We will now need a new class, `Maze`, defined in a separate module `maze.py`. The `__init__()` 
