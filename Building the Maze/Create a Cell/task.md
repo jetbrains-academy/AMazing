@@ -1,7 +1,7 @@
-The maze can be represented as a grid of cells. Each maze cell has unique 2D coordinates 
-(x, y), which define its position within the grid, and from two to four neighbors: two in 
-the case of the corner cells like (1, 1) or (1, 3) in the example below and four in the 
-case of the inner cells, e.g., (2, 2). A cell may have walls on the north, east, south, 
+The maze can be represented as a grid of cells. Each maze cell has unique 2D coordinates
+<code><span style="white-space: nowrap">(x, y)</span></code>, which define its position within the grid, and from two to four neighbors: two in 
+the case of the corner cells like <code><span style="white-space: nowrap">(1, 1)</span></code> or <code><span style="white-space: nowrap">(1, 3)</span></code> 
+in the example below and four in the case of the inner cells, e.g., <code><span style="white-space: nowrap">(2, 2)</span></code>. A cell may have walls on the north, east, south, 
 or west side.
 
 <style>
@@ -28,11 +28,11 @@ will all have unique coordinates. Therefore, it seems appropriate to store coord
 
 ### Task 
 
-Let's [initialize](https://docs.python.org/3/tutorial/classes.html#class-objects) a `Cell` at `(x,y)`.
+Let's [initialize](https://docs.python.org/3/tutorial/classes.html#class-objects) a `Cell` at <code><span style="white-space: nowrap">(x, y)</span></code>.
 
 ### Run 
 
-Run `output.py` to see the printed output of cell initialization at `(0, 0)`.
+Run `output.py` to see the printed output of cell initialization at <code><span style="white-space: nowrap">(x, y)</span></code>.
 To do so, just right-click on the file so that you can see the context menu and select Run ‘output’.
 
 Alternatively, you can use the gutter icon near the `if __name__ == '__main__':`  statement inside `output.py`.

@@ -7,7 +7,10 @@ Basic Python knowledge:
 - Functions
 - Classes
 
+If you don't know these things, you might want to check out our [Introduction to
+Python](https://plugins.jetbrains.com/plugin/16630-introduction-to-python) course first.
 
+#### DFS Algorithm
 
 In this project, we'll generate a 2D maze using an algorithm that treats a completed 
 maze as a [tree](https://en.wikipedia.org/wiki/Tree_(data_structure)), where the branches represent paths through the maze. This algorithm 
@@ -15,6 +18,8 @@ is called [Depth First Search](https://en.wikipedia.org/wiki/Depth-first_search)
 as possible along each branch before backtracking. The search remembers previously 
 visited nodes and will not repeat them. This is important because performing the 
 same search without remembering previously visited nodes results in an infinite loop.
+
+#### What Is a Maze?
 
 In two dimensions, a maze is a series of paths separated by walls, and for the sake 
 of simplicity, one can think of it as a 2-dimensional grid of cells. Each cell is a 
@@ -25,6 +30,7 @@ has a wall to the west (it is the same wall).
 
 ![img](maze.png)
 
+#### Problem Description
 We will start with an $N * N$ grid where all the cells have all four walls ("N", "S", "E", "W"). 
 To go from a grid of unconnected cells to a maze, we will need to knock down some of 
 them. When a new cell is visited by the algorithm, the wall between the new cell and 

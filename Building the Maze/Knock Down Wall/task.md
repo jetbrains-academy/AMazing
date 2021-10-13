@@ -1,5 +1,5 @@
 To create a maze from a grid of unconnected cells, we need to eliminate many walls.
-We will start from the cell at `(0, 0)` and traverse the grid. Whenever a new cell is 
+We will start from the cell at <code><span style="white-space: nowrap">(0, 0)</span></code> and traverse the grid. Whenever a new cell is 
 visited, the wall between the new cell and the previous one is removed. You can imagine 
 something actually moving from one cell to another and physically knocking the walls down.
 
