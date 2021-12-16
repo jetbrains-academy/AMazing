@@ -20,3 +20,9 @@ You can run the output.py to see how your code works – it should draw a PNG im
 (`neighbors.png`) of a grid with the selected cell highlighted in black and its valid 
 neighbors highlighted in red. Note that one of the neighbors is not highlighted – that’s 
 right, this one is not 'valid', as we have removed a wall between it and our cell.
+
+<div class="hint">
+
+You will need to add info about the `direction` of the valid neighbors to the list as well,
+so that the in the end it consists of tuples such as, for example `('N', <cell.Cell object at 0x114a73580>)`.
+</div>
