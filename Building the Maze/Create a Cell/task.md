@@ -13,12 +13,17 @@ img {
 </style>
 <img src="maze_grid.png" alt="centered image" width="300">
 
-<div class="hint"><a href="https://docs.python.org/3/tutorial/classes.html">Classes</a> are a convenient way to define and store custom objects in Python. 
+<details>
+<summary>Classes in Python</summary>
+<a href="https://docs.python.org/3/tutorial/classes.html">Classes</a> are a convenient way to 
+define and store custom objects in Python. 
 Creating a new class creates a new type of object, and new instances of that type can then be 
 made. Each class instance can have attributes and methods attached to it for maintaining and 
 modifying its state. We will be using classes to define the objects and functionality needed 
 in this course. If you are completely unfamiliar with classes, we suggest that you check out 
-the <a href="https://plugins.jetbrains.com/plugin/16630-introduction-to-python">Introduction to Python</a> course or the Python track at <a href="https://hi.hyperskill.org?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=first-task">JetBrains Academy</a> first.</div>
+the <a href="https://plugins.jetbrains.com/plugin/16630-introduction-to-python">Introduction 
+to Python</a> course or the Python track at <a href="https://hi.hyperskill.org?utm_source=ide&utm_medium=ide&utm_campaign=ide&utm_content=first-task">JetBrains Academy</a> first.
+</details>
 
 At this stage, we will simply initialize a grid cell with its coordinates. We defined the 
 class `Cell` for the maze cell objects. Each cell will be an instance of `Cell`, but they 
