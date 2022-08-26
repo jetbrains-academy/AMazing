@@ -1,0 +1,33 @@
+type: edu
+files:
+- name: maze.py
+  visible: true
+  placeholders:
+  - offset: 1229
+    length: 56
+    placeholder_text: '# TODO: we reached a dead end => get next cell from the cell
+      stack'
+  - offset: 1299
+    length: 192
+    placeholder_text: '# TODO: choose a random neighbouring cell and move to it'
+- name: __init__.py
+  visible: false
+- name: cell.py
+  visible: true
+- name: execute.svg
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: tests/test_task.py
+  visible: false
+- name: output.py
+  visible: true
+- name: maze.png
+  visible: true
+- name: convert.py
+  visible: true
+- name: learn.py
+  visible: true
+- name: example.py
+  visible: true
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSeb6sbUHqOObkQgtVVBjNHSFa2TwpeEb8_P7nIXwgTxnvknQg/viewform?usp=pp_url&entry.2103429047=Building+the+Maze+/+Make+the+Maze
