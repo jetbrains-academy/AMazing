@@ -22,8 +22,6 @@ files:
   visible: false
 - name: output.py
   visible: true
-- name: maze.png
-  visible: true
 - name: convert.py
   visible: true
 - name: learn.py
