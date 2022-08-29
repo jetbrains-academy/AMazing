@@ -1,5 +1,5 @@
-title: AMazing
 type: marketplace
+title: AMazing
 language: English
 summary: |-
   <p>This is a course by JetBrains Educational Products in which you will
@@ -16,3 +16,4 @@ environment: unittest
 content:
 - Introduction
 - Building the Maze
+- Solving the Maze

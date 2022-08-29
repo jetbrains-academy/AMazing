@@ -20,5 +20,3 @@ files:
   visible: true
 - name: main.py
   visible: true
-- name: maze.png
-  visible: true
