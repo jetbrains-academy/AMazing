@@ -3,13 +3,13 @@ files:
 - name: maze.py
   visible: true
   placeholders:
-  - offset: 1171
+  - offset: 1370
+    length: 192
+    placeholder_text: '# TODO: choose a random neighbouring cell and move to it'
+  - offset: 1301
     length: 56
     placeholder_text: '# TODO: we reached a dead end => get next cell from the cell
       stack'
-  - offset: 1241
-    length: 192
-    placeholder_text: '# TODO: choose a random neighbouring cell and move to it'
 - name: __init__.py
   visible: false
 - name: cell.py
@@ -21,5 +21,7 @@ files:
 - name: tests/test_task.py
   visible: false
 - name: output.py
+  visible: true
+- name: maze.png
   visible: true
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSeb6sbUHqOObkQgtVVBjNHSFa2TwpeEb8_P7nIXwgTxnvknQg/viewform?usp=pp_url&entry.2103429047=Building+the+Maze+/+Make+the+Maze
