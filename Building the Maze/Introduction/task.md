@@ -28,7 +28,7 @@ cell may be separated from its neighbors by walls. If a cell, for example, has a
 neighbor to the east and there is a wall between them, then this neighbor certainly 
 has a wall to the west (it is the same wall).
 
-![img](maze.png)
+![img](maze_example.png)
 
 #### Problem Description
 We will start with an $N * N$ grid where all the cells have all four walls ("N", "S", "E", "W"). 

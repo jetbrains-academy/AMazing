@@ -56,24 +56,29 @@ def test_reachable(maze):
 
 class TestCase(unittest.TestCase):
 
-    def test_make_maze_exist(self):
-        maze = Maze(5, 5)
-        self.assertTrue(hasattr(maze, "make_maze"), "Maze should have `make_maze` method")
-
     def test_make_maze(self):
-        maze = Maze(5, 5)
+        maze = Maze(10, 10, (0, 0))
         for line in maze.maze_grid:
             for cell in line:
-                self.assertTrue(cell.has_all_walls())
+                self.assertFalse(cell.has_all_walls(), msg="There should be no cells with all walls still present "
+                                                           "when you complete building the maze.")
 
-        maze.make_maze()
+    def test_make_maze_2(self):
+        maze = Maze(10, 10, (0, 0))
+        no_walls = []
         for line in maze.maze_grid:
             for cell in line:
-                self.assertFalse(cell.has_all_walls())
+                walls = [wall for wall in cell.walls.values()]
+                if walls == [False, False, False, False]:
+                    no_walls.append(walls)
+        print(no_walls)
+        if len(no_walls) == 64:
+            self.fail(msg="It seems all or most of the internal walls have been knocked down. That is not "
+                          "right.")
 
     def test_reachable(self):
-        maze_ = Maze(5, 5)
-        maze_.make_maze()
+        maze_ = Maze(10, 10, (0, 0))
+        # maze_.make_maze()
         test_ = [True if test_reachable(maze_) else False for i in range(100)]
         self.assertTrue(all(test_), msg='Some cells appear unreachable in your maze :('
                                         'This could happen if not all of the grid cells were visited '
