@@ -9,9 +9,10 @@ class Maze:
              'W': (-1, 0),
              'E': (1, 0)}
 
-    def __init__(self, nx, ny):
+    def __init__(self, nx, ny, start_):
         self.nx, self.ny = nx, ny
         self.maze_grid = np.array([[Cell(x, y) for y in range(ny)] for x in range(nx)])
+        self.__make_maze(start_)
 
     def cell_at(self, x, y):
         return self.maze_grid[x][y]
@@ -26,10 +27,11 @@ class Maze:
                     neighbors.append((direction, neighbor))
         return neighbors
 
-    def make_maze(self):
+    def __make_maze(self, start_coords):
         n = self.nx * self.ny
         cell_stack = []
-        current_cell = self.cell_at(0, 0)
+        # current_cell = self.cell_at(0, 0)
+        current_cell = self.cell_at(start_coords[0], start_coords[1])
         current_cell.status = 'Start'
         n_visited = 1
 

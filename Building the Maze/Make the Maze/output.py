@@ -49,11 +49,14 @@ def draw_image(image, filename, cells):
 if __name__ == '__main__':
     dimension1 = int(input('Enter x dimension: '))
     dimension2 = int(input('Enter y dimension: '))
+    start_x = int(input('Enter x coordinate of the start: '))
+    start_y = int(input('Enter y coordinate of the start: '))
+
     margin = 80
     cell_side = 100
     line_thickness = 10
-    maze = Maze(dimension1, dimension2)
-    maze.make_maze()
+    maze = Maze(dimension1, dimension2, [start_x, start_y])
+    # maze.make_maze()
     width, height = (margin + cell_side * dim for dim in maze.maze_grid.shape)
     img = Image.new("RGB", (width, height), (255, 255, 255))
 

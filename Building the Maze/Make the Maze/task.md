@@ -15,6 +15,11 @@ The algorithm should produce a path visiting each cell according to the followin
 
 We change the `status` of the first and the last visited cell in our code for visualization purposes.
 
+<details>
+
+Note that `__make_maze` is a private method. A [private](https://docs.python.org/3/tutorial/classes.html#private-variables) method is a method that should neither be accessed outside the class nor by any base class.
+In Python, you can define a private method by prefixing the method name with `__`. 
+</details>
 
 ### Task
 
