@@ -1,7 +1,6 @@
 # AMazing course [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
-<p>This is a course by JetBrains Educational Products in which you will
-learn to create a perfect maze using Python.
-  The target audience are the people with a bit of experience in Python programming.</p>
+<p>In this course by JetBrains Academy, you will strengthen your Python skills by implementing the Depth First Search algorithm to generate a 2D maze.</p>
+<p>To get the most out of the course, it is best to have basic Python knowledge, including an understanding of basic operations, loops, data structures, functions, classes, and objects. You will strengthen your Python OOP skills, learn to implement the DFS algorithm, and practice using Numpy in solving problems.</p>
 
   <p>Have fun and good luck!</p>
 
